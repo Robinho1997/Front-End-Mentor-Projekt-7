@@ -2,12 +2,17 @@
 
 
 body {
-  /* background-image: url(/images/bg-desktop.png);
-    background-repeat: no-repeat;
-    background-size: cover; */
+   background-image: url(/images/bg-desktop.png);
+   background-repeat: no-repeat;
+   background-size: contain;
     background-color: hsl(229, 57%, 11%);
     font-family: Raleway;
     font-size: 1rem;
+    background-position: bottom;
+    background-attachment: fixed;
+    
+   
+  
 }
 
 .container {
@@ -65,6 +70,7 @@ width: 100%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+   
     
     
 }
@@ -170,6 +176,7 @@ width: 100%;
     display: flex;
     gap: 1em;
     align-items: center;
+    
 }
 
 .zahl {
@@ -194,7 +201,46 @@ width: 100%;
 }
 
 @media (max-width:1000px) {
-    .container {
+    body {
+        background-image: url(/images/bg-mobile.png);
+       margin: 5;
+       background-size: cover;
     
     }
+    .comments {
+        width: 45%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+  }
+
+.bubble::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent ;
+    border-bottom:10px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 10px solid transparent;
+    top: 100%;
+    left: 87%;
+}
+
+.bubble {
+    border-bottom-right-radius: 20px;
+}
+
+
+
+.flexboxler {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
 }
